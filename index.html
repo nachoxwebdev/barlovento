@@ -35,7 +35,6 @@
 
     <!-- ===== HERO ===== -->
     <section class="hero" id="inicio">
-        <!-- Olas decorativas animadas -->
         <div class="hero-waves">
             <svg viewBox="0 0 1440 320" preserveAspectRatio="none">
                 <path d="M0,256L48,245.3C96,235,192,213,288,208C384,203,480,213,576,218.7C672,224,768,224,864,208C960,192,1056,160,1152,154.7C1248,149,1344,171,1392,181.3L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z" />
@@ -67,7 +66,6 @@
                 </div>
             </div>
         </div>
-        <!-- Flecha de scroll down -->
         <a href="#servicios" class="scroll-down">
             <i class="fas fa-chevron-down"></i>
         </a>
@@ -82,30 +80,39 @@
                 <p>Brindamos acompañamiento experto en cada etapa de su operación, garantizando cumplimiento, seguridad y eficiencia.</p>
             </div>
             <div class="services-grid">
-                <div class="service-card reveal" data-delay="100">
+                <!-- SERVICIO 1: MODAL OPIP -->
+                <div class="service-card reveal" data-delay="100" data-modal="modal-opip">
                     <div class="icon"><i class="fas fa-shield-virus"></i></div>
-                    <h3>Seguridad y Protección Marítima / Portuaria</h3>
-                    <p>Implementamos programas y medidas conforme al Código PBIP, garantizando la protección integral de buques, instalaciones portuarias y personal.</p>
+                    <h3>ORGANIZACIÓN DE PROTECCIÓN MARÍTIMA PORTUARIA</h3>
+                    <p>Gestión integral de protección, auditorías, planes de seguridad y recorridas a bordo. Haga clic para ver los detalles completos.</p>
                 </div>
-                <div class="service-card reveal" data-delay="200">
+
+                <!-- SERVICIO 2: MODAL ENSEÑANZAS -->
+                <div class="service-card reveal" data-delay="200" data-modal="modal-ensenanzas">
+                    <div class="icon"><i class="fas fa-chalkboard-teacher"></i></div>
+                    <h3>ENSEÑANZAS Y GESTIONES NÁUTICAS DEPORTIVAS</h3>
+                    <p>Habilitaciones oficiales y formación náutica deportiva con reconocimiento de la Prefectura Naval Argentina.</p>
+                </div>
+
+                <!-- SERVICIO 3: MODAL LEGAL -->
+                <div class="service-card reveal" data-delay="300" data-modal="modal-legal">
                     <div class="icon"><i class="fas fa-balance-scale"></i></div>
-                    <h3>Asesoría Técnica y Jurídica</h3>
-                    <p>Orientación legal especializada sobre legislación nacional e internacional, asegurando el cumplimiento de los estándares de la OMI y Prefectura Naval Argentina.</p>
+                    <h3>ASESORÍA LEGAL Y HABILITACIONES VARIAS</h3>
+                    <p>Derecho marítimo, PLANACON, habilitaciones, códigos IMSBC e IMDG para buques y puertos.</p>
                 </div>
-                <div class="service-card reveal" data-delay="300">
-                    <div class="icon"><i class="fas fa-ship"></i></div>
-                    <h3>Habilitación de Empresas y Amarraderos</h3>
-                    <p>Acompañamos a las empresas en procesos de habilitación y certificación, optimizando tiempos y cumpliendo con todos los requisitos normativos.</p>
-                </div>
+
+                <!-- SERVICIO 4: GESTIÓN AMBIENTAL -->
                 <div class="service-card reveal" data-delay="400">
                     <div class="icon"><i class="fas fa-recycle"></i></div>
                     <h3>Gestión Ambiental – IMDG / MARPOL</h3>
                     <p>Desarrollamos planes de gestión ambiental, manejo de residuos y cumplimiento de convenios internacionales para operaciones sostenibles.</p>
                 </div>
-                <div class="service-card reveal" data-delay="500">
-                    <div class="icon"><i class="fas fa-chalkboard-teacher"></i></div>
-                    <h3>Cursos de Capacitación Náutica</h3>
-                    <p>Formación avalada por la Autoridad Marítima Nacional, diseñada para profesionales y empresas del sector.</p>
+
+                <!-- SERVICIO 5: CURSOS DE CAPACITACIÓN (AHORA CON MODAL PBIP) -->
+                <div class="service-card reveal" data-delay="500" data-modal="modal-cursos-pbip">
+                    <div class="icon"><i class="fas fa-graduation-cap"></i></div>
+                    <h3>CURSOS DE CAPACITACIÓN NÁUTICA</h3>
+                    <p>Formación avalada por la Autoridad Marítima Nacional. Cursos PBIP, OPIP, y más para profesionales y empresas del sector.</p>
                 </div>
             </div>
         </div>
@@ -276,6 +283,130 @@
             </div>
         </div>
     </footer>
+
+    <!-- ===== MODALES (Ventanas emergentes) ===== -->
+
+    <!-- MODAL 1: ORGANIZACIÓN DE PROTECCIÓN MARÍTIMA PORTUARIA (SIN LOS CURSOS) -->
+    <div class="modal-overlay" id="modal-opip">
+        <div class="modal-container">
+            <button class="modal-close" aria-label="Cerrar"><i class="fas fa-times"></i></button>
+            <div class="modal-content">
+                <h2>ORGANIZACIÓN DE PROTECCIÓN MARÍTIMA PORTUARIA</h2>
+                <hr class="modal-divider" />
+
+                <h3>Servicio O.P.I.P.</h3>
+                <p><strong>Oficial de Protección de la Instalación Portuaria:</strong> Coordinación con buques, remolcadores y toda otra embarcación que amarre a muelle - ISGOTT 6 - Declaración de Protección Marítima - Sistema de Control de rondas y CCTV – Relevamientos y reportes de todos los aspectos relacionados con la protección de la IP.</p>
+
+                <h3>Plan de Protección y Manual de Protección</h3>
+                <p>Elaboración, confección y recertificación del Plan de Protección de la Instalación Portuaria y Manual de Procedimientos de Protección para Facilidades Portuarias, también realizamos Evaluaciones de protección para IP/FP. Posteriori presentación y gestión ante la Autoridad Marítima Prefectura Naval Argentina.</p>
+
+                <h3>Auditorias Internas y Externas</h3>
+                <ul>
+                    <li><strong>Internas del sistema de protección:</strong> La OPR es la encargada de controlar el funcionamiento del sistema de protección y puntualizando el cumplimiento del plan de protección / manual de procedimientos de protección.</li>
+                    <li><strong>Al sistema de vigilancia:</strong> Verificar el correcto control y registro de ingreso/egreso de personas y vehículos a la terminal.</li>
+                    <li><strong>Al sistema de recepción de carga y descarga de camiones:</strong> Verificando la documentación del transportista, chasis y acoplado, como así también de la carga.</li>
+                </ul>
+
+                <h3>Servicios de recorrida a bordo</h3>
+                <p>Ofrecemos y efectuamos una recorrida en buques arribados a la Instalación Portuaria para fines de Seguridad e Higiene y Protección Marítima.</p>
+                <ul>
+                    <li><strong>Supervisión e Inspección a bordo.</strong></li>
+                    <li><strong>C.A.D.:</strong> Control de Consumo de Alcohol y Drogas</li>
+                    <li><strong>C.C.C.:</strong> Control de Consumo de Combustibles</li>
+                    <li><strong>B.S:</strong> Inspección de Carga de Combustible (Bunker Survey)</li>
+                    <li><strong>C.E:</strong> Control de Equipaje (previo al embarque o al desembarque para tripulantes)</li>
+                    <li><strong>C.A:</strong> Control de Acceso (al buque o instalación)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL 2: ENSEÑANZAS Y GESTIONES NÁUTICAS DEPORTIVAS -->
+    <div class="modal-overlay" id="modal-ensenanzas">
+        <div class="modal-container">
+            <button class="modal-close" aria-label="Cerrar"><i class="fas fa-times"></i></button>
+            <div class="modal-content">
+                <h2>ENSEÑANZAS Y GESTIONES NÁUTICAS DEPORTIVAS</h2>
+                <hr class="modal-divider" />
+
+                <p>En BARLOVENTO, contamos con el reconocimiento oficial de la Prefectura Naval Argentina como Entidad dedicada a la Enseñanza y Capacitación en Navegación Deportiva, registrada bajo el Nº 03 PNA.</p>
+                <p>Este aval, otorgado conforme al Decreto 37/2025 – Régimen de la Navegación Marítima, Fluvial y Lacustre, garantiza que cumplimos con todos los estándares de calidad y seguridad exigidos por la Autoridad Marítima Nacional.</p>
+                <p>Nuestro objetivo es formar navegantes seguros, responsables y apasionados, ofreciendo una enseñanza integral que combina práctica, teoría y experiencia real en el agua.</p>
+
+                <h3>Habilitaciones Náuticas Deportivas autorizadas a dictar:</h3>
+                <ul class="course-list columns-2">
+                    <li>Aprendiz</li>
+                    <li>Grumete</li>
+                    <li>Conductor Náutico</li>
+                    <li>Timonel de Yate a Vela</li>
+                    <li>Timonel de Yate a Motor</li>
+                    <li>Timonel de Yate a Vela y Motor</li>
+                    <li>Patrón de Yate a Vela</li>
+                    <li>Patrón de Yate a Motor</li>
+                    <li>Patrón de Yate a Vela y Motor</li>
+                </ul>
+
+                <h3>Por qué elegir BARLOVENTO</h3>
+                <ul>
+                    <li>Reconocimiento oficial de la Prefectura Naval Argentina</li>
+                    <li>Instructores altamente capacitados y con amplia trayectoria en el ámbito marítimo</li>
+                    <li>Formación práctica en entornos reales de navegación</li>
+                    <li>Programas diseñados para todas las etapas: desde principiantes hasta navegantes avanzados</li>
+                </ul>
+                <p style="font-weight: 700; color: var(--primary); margin-top: 20px;">BARLOVENTO: Formación náutica con rumbo seguro.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL 3: ASESORÍA LEGAL Y HABILITACIONES VARIAS -->
+    <div class="modal-overlay" id="modal-legal">
+        <div class="modal-container">
+            <button class="modal-close" aria-label="Cerrar"><i class="fas fa-times"></i></button>
+            <div class="modal-content">
+                <h2>ASESORÍA LEGAL Y HABILITACIONES VARIAS</h2>
+                <hr class="modal-divider" />
+
+                <p><strong>Asesoría Legal en materia derecho marítimo y portuario.</strong></p>
+                <p>Legislación Nacional Argentina y convenios Internacionales (O.M.I).</p>
+
+                <h3>PLANACON</h3>
+                <p>Elaboración del Plan Nacional de Contingencias para I.P. - F.P. – Buques, de acuerdo con lo establecido en la O.M. N°08/98 DPAM.</p>
+
+                <h3>Ordenanza Marítima 05/01 (DPSN) “Autorización para el Amarre”</h3>
+                <p>Realizamos asesoramiento e informes para las “Normas de inspección y/o verificación para los puertos, terminales portuarias y/o muelles en autorización para el amarre”.</p>
+                <ul>
+                    <li><strong>Agregado 1:</strong> Con fines al Comercio Internacional o Interprovincial.</li>
+                    <li><strong>Agregado 2:</strong> No utilizados para el Comercio Internacional o Interprovincial (Pequeños Emprendimientos).</li>
+                </ul>
+
+                <h3>Código IMSBC en Buques y Puertos</h3>
+                <p>Realizamos la gestión de habilitación, asesoría y capacitación sobre el Código Internacional para la Aplicación de Procedimientos de la Organización Marítima Internacional, sobre la Carga de Granel Sólido (Código IMSBC), es una normativa esencial para la seguridad en la manipulación y el transporte de cargas a granel sólidas en buques.</p>
+
+                <h3>Código IMDG en Buques y Puertos</h3>
+                <p>Asesoramos en el cumplimiento del Código Marítimo Internacional de Mercancías Peligrosas, el mismo es aplicado a través de la Organización Marítima Internacional (OMI).</p>
+                <p>Es un conjunto de regulaciones y directrices internacionales que establece las normas para el transporte seguro de mercancías peligrosas por vía marítima.</p>
+                <p>Como los requisitos técnicos para el embalaje, etiquetado, carga y descarga, el transporte y la documentación de las mercancías peligrosas.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL 4: CURSOS PBIP Y CAPACITACIÓN NÁUTICA (NUEVO MODAL) -->
+    <div class="modal-overlay" id="modal-cursos-pbip">
+        <div class="modal-container">
+            <button class="modal-close" aria-label="Cerrar"><i class="fas fa-times"></i></button>
+            <div class="modal-content">
+                <h2 style="color: var(--accent-dark);">CURSOS P.B.I.P</h2>
+                <p><strong>Cursos y Capacitaciones acorde O.M. N°01/10 (D.E.D.U.)</strong></p>
+                <ul class="course-list">
+                    <li><strong>Curso O.P.I.P.</strong> "OFICIAL DE PROTECCIÓN DE LAS INSTALACIONES PORTUARIAS”.</li>
+                    <li><strong>Curso A.O.</strong> "PROTECCIÓN DE BUQUES E INSTALACIONES PORTUARIAS PARA PERSONAL QUE EJERZA ACTIVIDAD, OFICIO U PROFESIÓN EN JURISDICCIÓN PORTUARIA”.</li>
+                    <li><strong>Curso V.G.</strong> “PROTECCIÓN DE PUERTOS Y BUQUES PARA PERSONAL DE EMPRESAS DE VIGILANCIA”.</li>
+                    <li><strong>Curso D.T.</strong> “PROTECCIÓN DE PUERTOS Y BUQUES PARA DIRECTORES TÉCNICOS”</li>
+                    <li><strong>Curso O.C.P.M.</strong> “OFICIAL DE LA COMPAÑÍA PARA LA PROTECCIÓN MARÍTIMA”.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>

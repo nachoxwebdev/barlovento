@@ -286,7 +286,6 @@ header.scrolled {
     flex-wrap: wrap;
     gap: 16px;
 }
-/* Scroll down arrow */
 .scroll-down {
     position: absolute;
     bottom: 30px;
@@ -307,7 +306,6 @@ header.scrolled {
     50% { transform: translateX(-50%) translateY(10px); }
 }
 
-/* Hero card */
 .hero-visual {
     display: flex;
     justify-content: center;
@@ -417,6 +415,7 @@ header.scrolled {
     border: 1px solid rgba(0, 0, 0, 0.02);
     position: relative;
     overflow: hidden;
+    cursor: pointer;
 }
 .service-card::before {
     content: '';
@@ -451,6 +450,20 @@ header.scrolled {
     color: #5a6e7e;
     font-size: 0.95rem;
     line-height: 1.7;
+}
+.service-card[data-modal]::after {
+    content: '↗';
+    position: absolute;
+    top: 20px;
+    right: 24px;
+    font-size: 1.4rem;
+    color: var(--accent);
+    opacity: 0.4;
+    transition: var(--transition);
+}
+.service-card[data-modal]:hover::after {
+    opacity: 1;
+    transform: translate(4px, -4px);
 }
 
 /* ===== ABOUT ===== */
@@ -689,7 +702,7 @@ footer {
     color: #fff;
 }
 
-/* ===== ANIMACIONES REVEAL (SCROLL) ===== */
+/* ===== ANIMACIONES REVEAL ===== */
 .reveal {
     opacity: 0;
     transform: translateY(40px);
@@ -704,6 +717,140 @@ footer {
 .reveal[data-delay="300"] { transition-delay: 0.3s; }
 .reveal[data-delay="400"] { transition-delay: 0.4s; }
 .reveal[data-delay="500"] { transition-delay: 0.5s; }
+
+/* ===== MODALES ===== */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(10, 46, 74, 0.85);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+    padding: 20px;
+}
+.modal-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+.modal-container {
+    background: #fff;
+    border-radius: var(--radius);
+    max-width: 820px;
+    width: 100%;
+    max-height: 85vh;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.4);
+    transform: scale(0.9) translateY(20px);
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.4s ease;
+    opacity: 0;
+}
+.modal-overlay.active .modal-container {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+}
+.modal-close {
+    position: sticky;
+    top: 16px;
+    float: right;
+    margin: 16px 20px 0 0;
+    background: var(--bg-light);
+    border: none;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    font-size: 1.4rem;
+    color: var(--primary);
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+.modal-close:hover {
+    background: var(--accent);
+    color: #fff;
+    transform: rotate(90deg);
+}
+.modal-content {
+    padding: 40px 50px 50px;
+}
+.modal-content h2 {
+    font-family: var(--font-serif);
+    font-size: 2.2rem;
+    color: var(--primary);
+    margin-bottom: 8px;
+}
+.modal-content h2:not(:first-of-type) {
+    margin-top: 30px;
+}
+.modal-content h3 {
+    font-family: var(--font-serif);
+    font-size: 1.4rem;
+    color: var(--primary-light);
+    margin-top: 24px;
+    margin-bottom: 10px;
+}
+.modal-content p {
+    color: #2d3f4f;
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 12px;
+}
+.modal-content ul {
+    margin: 8px 0 16px 20px;
+    color: #2d3f4f;
+}
+.modal-content ul li {
+    margin-bottom: 6px;
+    line-height: 1.7;
+}
+.modal-divider {
+    border: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--accent), transparent);
+    margin: 20px 0 24px;
+    opacity: 0.3;
+}
+.course-list {
+    list-style: none;
+    margin-left: 0 !important;
+}
+.course-list li {
+    padding: 6px 0 6px 28px;
+    position: relative;
+}
+.course-list li::before {
+    content: '▹';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-weight: 700;
+}
+.columns-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px 20px;
+}
+@media (max-width: 600px) {
+    .columns-2 {
+        grid-template-columns: 1fr;
+    }
+    .modal-content {
+        padding: 24px;
+    }
+    .modal-content h2 {
+        font-size: 1.6rem;
+    }
+}
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 992px) {

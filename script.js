@@ -64,3 +64,51 @@ const observer = new IntersectionObserver((entries) => {
 revealElements.forEach(el => {
     observer.observe(el);
 });
+
+// ===== MODALES =====
+const modalTriggers = document.querySelectorAll('.service-card[data-modal]');
+const modals = document.querySelectorAll('.modal-overlay');
+const closeButtons = document.querySelectorAll('.modal-close');
+
+function openModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+}
+
+function closeAllModals() {
+    modals.forEach(modal => {
+        modal.classList.remove('active');
+    });
+    document.body.style.overflow = '';
+}
+
+modalTriggers.forEach(card => {
+    card.addEventListener('click', function() {
+        const modalId = this.dataset.modal;
+        openModal(modalId);
+    });
+});
+
+closeButtons.forEach(btn => {
+    btn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        closeAllModals();
+    });
+});
+
+modals.forEach(modal => {
+    modal.addEventListener('click', function(e) {
+        if (e.target === this) {
+            closeAllModals();
+        }
+    });
+});
+
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        closeAllModals();
+    }
+});

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Barlovento Maritime Service · Excelencia en Seguridad Marítima</title>
+    <!-- Fuentes premium -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <!-- CSS externo -->
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header id="header">
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                <img src="imagenes/logo.jpg" alt="Barlovento Maritime Service" class="logo-img" />
+                <span>Barlovento<span>.</span></span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#contacto" class="btn-nav">Contacto</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="Menú">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="inicio">
+        <!-- Olas decorativas animadas -->
+        <div class="hero-waves">
+            <svg viewBox="0 0 1440 320" preserveAspectRatio="none">
+                <path d="M0,256L48,245.3C96,235,192,213,288,208C384,203,480,213,576,218.7C672,224,768,224,864,208C960,192,1056,160,1152,154.7C1248,149,1344,171,1392,181.3L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z" />
+            </svg>
+        </div>
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <h1>Seguridad Marítima<br /><span>con excelencia</span></h1>
+                <p>
+                    Aseguramos la eficiencia legal, administrativa, operativa y de seguridad integral
+                    de cada uno de nuestros clientes en el ámbito marítimo y portuario.
+                </p>
+                <div class="hero-actions">
+                    <a href="#servicios" class="btn"><i class="fas fa-anchor"></i> Nuestros servicios</a>
+                    <a href="#contacto" class="btn btn-outline"><i class="fas fa-envelope"></i> Contáctenos</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-card">
+                    <h3>⚓ Especialistas en</h3>
+                    <div class="tagline">Protección marítima &amp; portuaria</div>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-shield-alt"></i> Programas PBIP / ISPS</li>
+                        <li><i class="fas fa-gavel"></i> Asesoría legal y normativa OMI</li>
+                        <li><i class="fas fa-building"></i> Habilitación de empresas portuarias</li>
+                        <li><i class="fas fa-leaf"></i> Gestión ambiental MARPOL / IMDG</li>
+                        <li><i class="fas fa-graduation-cap"></i> Capacitación náutica avalada</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Flecha de scroll down -->
+        <a href="#servicios" class="scroll-down">
+            <i class="fas fa-chevron-down"></i>
+        </a>
+    </section>
+
+    <!-- ===== SERVICES ===== -->
+    <section class="section services" id="servicios">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="label">Servicios</span>
+                <h2>Soluciones integrales para el <span>sector marítimo</span></h2>
+                <p>Brindamos acompañamiento experto en cada etapa de su operación, garantizando cumplimiento, seguridad y eficiencia.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card reveal" data-delay="100">
+                    <div class="icon"><i class="fas fa-shield-virus"></i></div>
+                    <h3>Seguridad y Protección Marítima / Portuaria</h3>
+                    <p>Implementamos programas y medidas conforme al Código PBIP, garantizando la protección integral de buques, instalaciones portuarias y personal.</p>
+                </div>
+                <div class="service-card reveal" data-delay="200">
+                    <div class="icon"><i class="fas fa-balance-scale"></i></div>
+                    <h3>Asesoría Técnica y Jurídica</h3>
+                    <p>Orientación legal especializada sobre legislación nacional e internacional, asegurando el cumplimiento de los estándares de la OMI y Prefectura Naval Argentina.</p>
+                </div>
+                <div class="service-card reveal" data-delay="300">
+                    <div class="icon"><i class="fas fa-ship"></i></div>
+                    <h3>Habilitación de Empresas y Amarraderos</h3>
+                    <p>Acompañamos a las empresas en procesos de habilitación y certificación, optimizando tiempos y cumpliendo con todos los requisitos normativos.</p>
+                </div>
+                <div class="service-card reveal" data-delay="400">
+                    <div class="icon"><i class="fas fa-recycle"></i></div>
+                    <h3>Gestión Ambiental – IMDG / MARPOL</h3>
+                    <p>Desarrollamos planes de gestión ambiental, manejo de residuos y cumplimiento de convenios internacionales para operaciones sostenibles.</p>
+                </div>
+                <div class="service-card reveal" data-delay="500">
+                    <div class="icon"><i class="fas fa-chalkboard-teacher"></i></div>
+                    <h3>Cursos de Capacitación Náutica</h3>
+                    <p>Formación avalada por la Autoridad Marítima Nacional, diseñada para profesionales y empresas del sector.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section class="section about" id="nosotros">
+        <div class="container about-grid">
+            <div class="about-text reveal">
+                <span class="label" style="display:inline-block; font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:2px; color:var(--accent); background:rgba(201,168,76,0.10); padding:4px 18px; border-radius:50px; margin-bottom:12px;">Quiénes somos</span>
+                <h2>Comprometidos con la <span>excelencia</span> marítima</h2>
+                <p>
+                    En <span class="highlight">Barlovento Maritime Service S.R.L.</span> nos especializamos en
+                    brindar soluciones integrales de seguridad, asesoría legal y gestión operativa para el
+                    sector marítimo y portuario. Nuestro equipo combina experiencia técnica y conocimiento
+                    profundo de las normativas nacionales e internacionales.
+                </p>
+                <p>
+                    Trabajamos con un enfoque personalizado, entendiendo que cada cliente y cada operación
+                    son únicos. Nuestro objetivo es <span class="highlight">asegurar la eficiencia legal,
+                    administrativa, operativa y de seguridad integral</span> de cada uno de nuestros clientes.
+                </p>
+                <a href="#contacto" class="btn btn-primary" style="margin-top:12px;">
+                    <i class="fas fa-paper-plane"></i> Trabajemos juntos
+                </a>
+            </div>
+            <div class="about-visual">
+                <div class="stat-box reveal" data-delay="100">
+                    <span class="number">100%</span>
+                    <span class="label">Cumplimiento normativo</span>
+                </div>
+                <div class="stat-box reveal" data-delay="200">
+                    <span class="number">24/7</span>
+                    <span class="label">Asesoría disponible</span>
+                </div>
+                <div class="stat-box reveal" data-delay="300">
+                    <span class="number">★</span>
+                    <span class="label">Excelencia certificada</span>
+                </div>
+                <div class="stat-box reveal" data-delay="400">
+                    <span class="number">+50</span>
+                    <span class="label">Clientes satisfechos</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section class="section contact" id="contacto">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="label">Contacto</span>
+                <h2>Hablemos de su <span>proyecto</span></h2>
+                <p>Estamos listos para asesorarlo. Comuníquese con nosotros y descubra cómo podemos potenciar su operación.</p>
+            </div>
+            <div class="contact-wrapper">
+                <div class="contact-info reveal">
+                    <h3>Estamos aquí para <span style="color:var(--accent-dark);">ayudarlo</span></h3>
+                    <p>
+                        Nuestro equipo de expertos está disponible para brindarle la asesoría que necesita.
+                        Ya sea para una consulta puntual o un acompañamiento integral, en Barlovento
+                        Maritime Service encontrará un socio estratégico.
+                    </p>
+                    <div class="contact-details">
+                        <div class="item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <div class="info">San Nicolás de los Arroyos</div>
+                                <div class="sub">Provincia de Buenos Aires, Argentina</div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <i class="fas fa-phone-alt"></i>
+                            <div>
+                                <div class="info">11-68022907</div>
+                                <div class="sub">Llamadas y WhatsApp</div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <i class="fas fa-phone-alt"></i>
+                            <div>
+                                <div class="info">3364-010824</div>
+                                <div class="sub">Llamadas y WhatsApp</div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <div class="info">barlovento.info@yahoo.com</div>
+                                <div class="sub">Correo electrónico</div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <div class="info">oprbarlovento.info@gmail.com</div>
+                                <div class="sub">Correo alternativo</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form reveal">
+                    <h3>Envíe su mensaje</h3>
+                    <form id="contactForm" action="#" method="POST">
+                        <div class="form-group">
+                            <label for="name">Nombre completo</label>
+                            <input type="text" id="name" placeholder="Ej. Juan Pérez" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Correo electrónico</label>
+                            <input type="email" id="email" placeholder="juan@ejemplo.com" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Teléfono</label>
+                            <input type="tel" id="phone" placeholder="+54 11 1234-5678" />
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensaje</label>
+                            <textarea id="message" placeholder="Cuéntenos sobre su proyecto o consulta..."></textarea>
+                        </div>
+                        <button type="submit" class="btn" style="width:100%; justify-content:center;">
+                            <i class="fas fa-paper-plane"></i> Enviar mensaje
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <img src="imagenes/logo.jpg" alt="Barlovento Maritime Service" class="logo-img" />
+                        <span>Barlovento<span>.</span></span>
+                    </div>
+                    <p>
+                        Excelencia en seguridad marítima, asesoría legal y gestión operativa para el
+                        sector portuario y naviero.
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>Enlaces</h4>
+                    <ul>
+                        <li><a href="#servicios">Servicios</a></li>
+                        <li><a href="#nosotros">Nosotros</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contacto rápido</h4>
+                    <ul>
+                        <li><a href="tel:+541168022907">11-68022907</a></li>
+                        <li><a href="tel:+543364010824">3364-010824</a></li>
+                        <li><a href="mailto:barlovento.info@yahoo.com">barlovento.info@yahoo.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; 2026 Barlovento Maritime Service S.R.L. — Todos los derechos reservados.</span>
+                <div class="footer-socials">
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
